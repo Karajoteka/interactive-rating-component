@@ -83,6 +83,7 @@ body {
   width: 45px;
   height: 45px;
   background-color: var(--dark-grey);
+  border: none;
   border-radius: 50%;
   padding: 18px;
   color: var(--light-grey);
@@ -95,9 +96,9 @@ body {
   color: var(--white);
 }
 
-/* Por solucionar que se quede en gris una vez que se ha pulsado */
-.number-container:checked {
+.number-container:focus {
   background-color: var(--medium-grey);
+  color: var(--white);
 }
 
 .submit-button {
@@ -118,10 +119,10 @@ body {
 
 /* Segunda pantalla */
 .result-container {
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: initial ;
 }
 
 .result-container img {
