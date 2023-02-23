@@ -19,11 +19,11 @@
     <h1>How did we do?</h1>
     <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
     <div class="points">
-      <button id="number-1" class="number-container">1</button>
-      <button id="number-2" class="number-container">2</button>
-      <button id="number-3" class="number-container">3</button>
-      <button id="number-4" class="number-container">4</button>
-      <button id="number-5" class="number-container">5</button>
+      <button id="number-1" class="number-container" onclick="btnOnClick()">1</button>
+      <button id="number-2" class="number-container" onclick="btnOnClick()">2</button>
+      <button id="number-3" class="number-container" onclick="btnOnClick()">3</button>
+      <button id="number-4" class="number-container" onclick="btnOnClick()">4</button>
+      <button id="number-5" class="number-container" onclick="btnOnClick()">5</button>
     </div>
     <button class="submit-button">SUBMIT</button>
   </div>
@@ -31,7 +31,7 @@
     <div>
       <img src="./images/illustration-thank-you.svg" alt="Thank you!">
     </div>
-    <div class="selection">You selected '/' out of 5</div>
+    <div class="selection">You selected <span class="selected-number"></span> out of 5</div>
     <h2>Thank you!</h2>
     <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
   </div>
