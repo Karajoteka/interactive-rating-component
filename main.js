@@ -26,13 +26,33 @@ function changeColor() {
 
 
 // Hacer que cambie la pantalla
-const submitButton = document.querySelector('button');
+const submitButton = document.querySelector('.submit-button');
+const submitContainer = document.querySelector('.submit-container');
+const resultContainer = document.querySelector('.result-container');
 
-submitButton.addEventListener('click', changeScreen);
+submitButton.addEventListener('click', showResultContainer);
 
-function changeScreen() {
-
+function showResultContainer() {
+  resultContainer.classList.remove('inactive');
+  submitContainer.classList.add('inactive');
 }
+
+
+
+
+// resultContainer.classList.add('inactive');
+
+
+// function changeScreen() {
+  
+// const isResultContainerClosed = resultContainer.classList.contains('inactive');
+  
+
+
+  
+// }
+
+//changeScreen();
 
 
 // Hacer que aparezca, en la segunda pantalla, el número seleccionado en la primera

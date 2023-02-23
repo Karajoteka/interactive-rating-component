@@ -7,11 +7,13 @@
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 62.5%;
   font-family: 'Overpass', sans-serif;
@@ -24,14 +26,13 @@ body {
   background-color: var(--very-dark-blue);
 }
 
-.result-container {
-  display: flex none;
-  flex-direction: column;
-  align-items: center;
+.inactive {
+  display: none;
 }
 
 /* Los 2 contenedores */
 .submit-container, .result-container {
+  /* position: absolute; */
   width: 350px;
   height: 390px;
   padding: 30px;
@@ -40,6 +41,9 @@ body {
 }
 
 /* Primera pantalla */
+.submit-container {
+  position: absolute;
+}
 .submit-container .star {
   width: 45px;
   height: 45px;
@@ -50,26 +54,31 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .star img {
   width: 15px;
   height: 15px;
 }
+
 .submit-container h1 {
   color: var(--white);
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
 .submit-container p {
   color: var(--light-grey);
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+
 .points {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 25px;
 }
+
 .number-container {
   width: 45px;
   height: 45px;
@@ -79,16 +88,19 @@ body {
   color: var(--light-grey);
   font-size: 1.5rem;
 }
+
 .number-container:hover {
   cursor: pointer;
   background-color: var(--orange);
   color: var(--white);
 }
+
 /* Por solucionar que se quede en gris una vez que se ha pulsado */
 .number-container:checked {
   background-color: var(--medium-grey);
 }
-button {
+
+.submit-button {
   width: 100%;
   height: 50px;
   background-color: var(--orange);
@@ -97,16 +109,25 @@ button {
   font-size: 1.5rem;
   color: var(--white);
 }
-button:hover {
+
+.submit-button:hover {
   cursor: pointer;
   background-color: var(--white);
   color: var(--orange);
 }
 
 /* Segunda pantalla */
+.result-container {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .result-container img {
   margin: 15px auto; 
 }
+
 .result-container .selection {
   background-color: var(--dark-grey);
   font-size: 1.5rem;
@@ -115,11 +136,13 @@ button:hover {
   border-radius: 50px;
   color: var(--orange);
 }
+
 .result-container h2 {
   margin-top: 30px;
   font-size: 2.5rem;
   color: var(--white);
 }
+
 .result-container p {
   margin-top: 15px;
   font-size: 1.5rem;
@@ -127,11 +150,3 @@ button:hover {
   text-align: center;
 }
 
-
-.submit-container {
-  /* display: none; */
-}
-
-.result-container {
-  display: none;
-}
